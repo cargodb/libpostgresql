@@ -1,5 +1,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "libpostgresql"
+  name: "libpostgresql",
+  providers: [
+    .Brew("postgres"),
+    .Apt("postgresql"),
+    .Apt("postgresql-contrib"),
+  ]
 )
