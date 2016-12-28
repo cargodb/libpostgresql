@@ -1,0 +1,11 @@
+module libpostgresql_macos [system] {
+    header "/usr/local/include/libpq-fe.h"
+    link "pq"
+    export *
+}
+
+module libpostgresql_linux [system] {
+    header "/usr/include/postgresql/libpq-fe.h"
+    link "pq"
+    export *
+}
